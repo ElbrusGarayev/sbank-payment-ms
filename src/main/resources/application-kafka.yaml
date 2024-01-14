@@ -1,0 +1,8 @@
+kafka:
+  bootstrap-servers: ${KAFKA_HOST:localhost}:${KAFKA_PORT:29092}
+  configs:
+    group-id: ${CONSUMER_GROUP_ID:payment-ms-group}
+    auto-offset-reset: ${AUTO_OFFSET_RESET:earliest}
+  topics:
+    update-balance: ${UPDATE_BALANCE_TOPIC:sbank.customer-ms.update-balance}
+    balance-response: ${BALANCE_RESPONSE_TOPIC:sbank.payment-ms.balance-response}

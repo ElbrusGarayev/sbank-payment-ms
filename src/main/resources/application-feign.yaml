@@ -1,0 +1,14 @@
+feign:
+  client:
+    customer-ms:
+      url: ${CUSTOMER_MS_URL:http://localhost:9001/customer/api/}
+
+spring:
+  cloud:
+    openfeign:
+      client:
+        config:
+          default:
+            connect-timeout: 200000
+            logger-level: FULL
+            read-timeout: 190000
